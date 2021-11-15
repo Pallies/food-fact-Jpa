@@ -1,4 +1,5 @@
 .idea\
 food-facts-Jpa.iml
+open-food-facts.csv
 persistence.xml
-food-facts-Jpa.iml
+
