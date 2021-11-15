@@ -1,16 +1,13 @@
-package menu;
+package fr.diginamic.menu;
 
 import java.util.Scanner;
 
-import models.Categorie;
-import models.Marque;
-import services.CategorieProduit;
-import services.MarqueCategorieProduit;
-import services.MarqueProduit;
-import services.ProduitService;
-import services.Stock;
-import view.AffichageMain;
-import view.AffichageService;
+import fr.diginamic.models.Categorie;
+import fr.diginamic.models.Marque;
+import fr.diginamic.services.*;
+import fr.diginamic.view.AffichageMain;
+import fr.diginamic.view.AffichageService;
+
 
 /**
  * The Class MainMenu.

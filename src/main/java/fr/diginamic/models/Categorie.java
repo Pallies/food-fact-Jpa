@@ -1,6 +1,7 @@
-package models;
+package fr.diginamic.models;
 
-import utils.FormatTo;
+
+import fr.diginamic.utils.FormatTo;
 
 /**
  * The Class Categorie.

@@ -1,4 +1,4 @@
-package services;
+package fr.diginamic.services;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import models.Categorie;
-import models.Produit;
+import fr.diginamic.models.Categorie;
+import fr.diginamic.models.Produit;
 
 /**
- * The Class ProduitCategorie. création d'une liste Ã  partir d'une Catégorie
+ * The Class ProduitCategorie. crï¿½ation d'une liste Ã  partir d'une Catï¿½gorie
  *
  */
 public class CategorieProduit extends ProduitService implements Predicate<Produit> {
@@ -58,7 +58,7 @@ public class CategorieProduit extends ProduitService implements Predicate<Produi
 	}
 	/**
 	 * Selection by allergens.
-	 * sélection des produits avec le plus d'ellergènes de la Catégorie
+	 * sï¿½lection des produits avec le plus d'ellergï¿½nes de la Catï¿½gorie
 	 * @param nb the nb
 	 * @return the list produits
 	 */
@@ -71,7 +71,7 @@ public class CategorieProduit extends ProduitService implements Predicate<Produi
 
 	/**
 	 * Selection by additif.
-	 * Sélection des produits avec le plus d'additifs de la Catégorie
+	 * Sï¿½lection des produits avec le plus d'additifs de la Catï¿½gorie
 	 * @param nb the nb
 	 * @return the list produits
 	 */

@@ -1,4 +1,4 @@
-package models;
+package fr.diginamic.models;
 
 /**
  * The Class Descriptif.

@@ -1,4 +1,8 @@
-package services;
+package fr.diginamic.services;
+
+import fr.diginamic.models.Categorie;
+import fr.diginamic.models.Marque;
+import fr.diginamic.models.Produit;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,13 +10,10 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import models.Categorie;
-import models.Marque;
-import models.Produit;
 
 /**
- * The Class ProduitCategorieMarque. création d'une liste Ã  partir d'une
- * Catégorie et d'une marque
+ * The Class ProduitCategorieMarque. crï¿½ation d'une liste Ã  partir d'une
+ * Catï¿½gorie et d'une marque
  * 
  */
 public class MarqueCategorieProduit extends ProduitService implements Predicate<Produit> {
@@ -65,7 +66,7 @@ public class MarqueCategorieProduit extends ProduitService implements Predicate<
 	}
 	/**
 	 * Selection by allergens.
-	 * sélection des produits avec le plus d'ellergÃ¨nes de la Catégorie
+	 * sï¿½lection des produits avec le plus d'ellergÃ¨nes de la Catï¿½gorie
 	 * @param nb the nb
 	 * @return the list produits
 	 */
@@ -78,7 +79,7 @@ public class MarqueCategorieProduit extends ProduitService implements Predicate<
 
 	/**
 	 * Selection by additif.
-	 * Sélection des produits avec le plus d'additifs de la Catégorie
+	 * Sï¿½lection des produits avec le plus d'additifs de la Catï¿½gorie
 	 * @param nb the nb
 	 * @return the list produits
 	 */

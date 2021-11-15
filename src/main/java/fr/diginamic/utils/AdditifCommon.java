@@ -1,4 +1,4 @@
-package utils;
+package fr.diginamic.utils;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -7,7 +7,8 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-import models.Produit;
+import fr.diginamic.models.Produit;
+
 
 /**
  * The Class AdditifCommon.

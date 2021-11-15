@@ -1,4 +1,4 @@
-package services.factory;
+package fr.diginamic.services.factory;
 
 
 

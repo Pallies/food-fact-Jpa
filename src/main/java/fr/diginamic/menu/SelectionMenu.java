@@ -1,10 +1,12 @@
-package menu;
+package fr.diginamic.menu;
+
+import fr.diginamic.services.ProduitService;
+import fr.diginamic.view.AffichageSelection;
+import fr.diginamic.view.AffichageService;
 
 import java.util.Scanner;
 
-import services.ProduitService;
-import view.AffichageSelection;
-import view.AffichageService;
+
 
 /**
  * The Class SelectionMenu.

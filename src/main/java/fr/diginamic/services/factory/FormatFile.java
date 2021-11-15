@@ -1,9 +1,12 @@
-package services.factory;
+package fr.diginamic.services.factory;
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import models.Produit;
+import fr.diginamic.models.Produit;
+
 
 /**
  * Class servant à la fabrication d'un produit.

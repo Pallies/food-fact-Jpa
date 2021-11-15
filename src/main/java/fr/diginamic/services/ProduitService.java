@@ -1,13 +1,14 @@
-package services;
+package fr.diginamic.services;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import models.Produit;
-import utils.AdditifCommon;
-import utils.AllergenCommon;
+import fr.diginamic.models.Produit;
+import fr.diginamic.utils.AdditifCommon;
+import fr.diginamic.utils.AllergenCommon;
+
 
 /**
  * The Class ProduitService.
@@ -25,7 +26,7 @@ public abstract class ProduitService {
 	public abstract List<Produit> selectionByNutriScoreF(int nb);
 
 	/**
-	 * Selection by allergens. sélection des produits avec le plus d'ellergÃ¨nes
+	 * Selection by allergens. sï¿½lection des produits avec le plus d'ellergÃ¨nes
 	 * 
 	 * @param nb the nb
 	 * @return the list
@@ -37,7 +38,7 @@ public abstract class ProduitService {
 	}
 
 	/**
-	 * Selection by additif. Sélection des produits avec le plus d'additifs
+	 * Selection by additif. Sï¿½lection des produits avec le plus d'additifs
 	 * 
 	 * @param nb the nb
 	 * @return the list
@@ -49,7 +50,7 @@ public abstract class ProduitService {
 	}
 
 	/**
-	 * Selection by ingredients. Sélection des produits avec le plus d'ingrédients
+	 * Selection by ingredients. Sï¿½lection des produits avec le plus d'ingrï¿½dients
 	 * 
 	 * @param nb the nb
 	 * @return the list
@@ -61,7 +62,7 @@ public abstract class ProduitService {
 	}
 
 	/**
-	 * Allergens commun. Sélection des allergènes les plus courant
+	 * Allergens commun. Sï¿½lection des allergï¿½nes les plus courant
 	 * 
 	 * @return the list
 	 */
@@ -75,7 +76,7 @@ public abstract class ProduitService {
 	}
 
 	/**
-	 * Additif commun. Sélection des allergènes les plus courant
+	 * Additif commun. Sï¿½lection des allergï¿½nes les plus courant
 	 * 
 	 * @return the list
 	 */

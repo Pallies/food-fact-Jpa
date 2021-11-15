@@ -1,4 +1,4 @@
-package utils;
+package fr.diginamic.utils;
 
 import java.util.Comparator;
 import java.util.HashMap;

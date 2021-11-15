@@ -1,4 +1,4 @@
-package services;
+package fr.diginamic.services;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,20 +9,21 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import models.Categorie;
-import models.Marque;
-import models.Produit;
-import run.ReadFoodFact;
-import services.factory.FormatFile;
-import utils.SetInHashMap;
+import fr.diginamic.models.Categorie;
+import fr.diginamic.models.Marque;
+import fr.diginamic.models.Produit;
+import fr.diginamic.run.ReadFoodFact;
+import fr.diginamic.services.factory.FormatFile;
+import fr.diginamic.utils.SetInHashMap;
+
 
 /**
  * The Class Stock.
  *
- * @Singleton Class instanciée une seul fois pour la lecture du fichier
+ * @Singleton Class instanciï¿½e une seul fois pour la lecture du fichier
  *            OpenFoodFact
  * 
- *            la classe ne peut pas être instancié
+ *            la classe ne peut pas ï¿½tre instanciï¿½
  */
 public class Stock extends ProduitService {
 
@@ -31,7 +32,7 @@ public class Stock extends ProduitService {
 	private static Stock instance = null;
 
 	/**
-	 * #Constructor appel du Lecteur du fichier appel du formatteur de données
+	 * #Constructor appel du Lecteur du fichier appel du formatteur de donnï¿½es
 	 * constitution de la liste Produit.
 	 */
 	private Stock() {
@@ -82,7 +83,7 @@ public class Stock extends ProduitService {
 	}
 
 	/**
-	 * Listing marque categorie. listing généré Ã  la suite du choix de la marque
+	 * Listing marque categorie. listing gï¿½nï¿½rï¿½ Ã  la suite du choix de la marque
 	 * 
 	 * @param marque the marque
 	 * @return the map
@@ -122,8 +123,8 @@ public class Stock extends ProduitService {
 }
 
 /**
- * The Class FilterMarque. ne concerne que la méthode listingMarqueCategorie et
- * n'a pas vocation Ã  Ãªtre externalisée
+ * The Class FilterMarque. ne concerne que la mï¿½thode listingMarqueCategorie et
+ * n'a pas vocation Ã  Ãªtre externalisï¿½e
  */
 class FilterMarque implements Predicate<Produit> {
 

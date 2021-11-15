@@ -1,9 +1,10 @@
-package view;
+package fr.diginamic.view;
+
+import fr.diginamic.models.Marque;
+import fr.diginamic.services.Stock;
 
 import java.util.List;
 
-import models.Marque;
-import services.Stock;
 
 /**
  * The Class AffichageMain.

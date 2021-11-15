@@ -1,11 +1,11 @@
-package utils;
+package fr.diginamic.utils;
 
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import models.Descriptif;
-import models.Produit;
+import fr.diginamic.models.Descriptif;
+import fr.diginamic.models.Produit;
 
 /**
  * The Class AllergenCommon.

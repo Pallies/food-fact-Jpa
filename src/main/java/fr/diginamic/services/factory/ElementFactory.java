@@ -1,12 +1,13 @@
-package services.factory;
+package fr.diginamic.services.factory;
 
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import models.Attributs;
-import models.Element;
+import fr.diginamic.models.Attributs;
+import fr.diginamic.models.Element;
+
 
 /**
  * Class servant à la fabrication d'un produit.

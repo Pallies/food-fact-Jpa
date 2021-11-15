@@ -1,18 +1,25 @@
-package models;
+package fr.diginamic.models;
 
+import fr.diginamic.utils.FormatTo;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import utils.FormatTo;
+
 
 /**
  * The Class Produit.
  */
 public class Produit {
 
+
 	/** Categorie du poduit. */
 	private Categorie categorie;
+
 
 	/** Marque du produit. */
 	private Marque marque;
@@ -34,6 +41,9 @@ public class Produit {
 
 	/** list d'additifs. */
 	private List<Descriptif> additifs;
+
+	public Produit() {
+	}
 
 	/**
 	 * #Constructor.

@@ -1,4 +1,4 @@
-package view;
+package fr.diginamic.view;
 
 /**
  * The Class AffichageMenu.

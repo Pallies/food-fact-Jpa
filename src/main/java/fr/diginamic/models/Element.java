@@ -1,4 +1,4 @@
-package models;
+package fr.diginamic.models;
 
 import java.util.HashMap;
 import java.util.Map.Entry;

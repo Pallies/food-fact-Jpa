@@ -1,4 +1,6 @@
-package run;
+package fr.diginamic.run;
+
+import fr.diginamic.error.FilesError;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -9,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import error.FilesError;
+
 
 /**
  * The Class ReadFoodFact.

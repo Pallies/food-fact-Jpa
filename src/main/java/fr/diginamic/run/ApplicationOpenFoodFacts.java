@@ -1,8 +1,8 @@
-package run;
+package fr.diginamic.run;
 
 import java.util.Scanner;
 
-import menu.MainMenu;
+import fr.diginamic.menu.MainMenu;
 
 /**
  * The Class ApplicationOpenFoodFacts.

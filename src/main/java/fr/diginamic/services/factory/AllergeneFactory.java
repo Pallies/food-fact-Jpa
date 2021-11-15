@@ -1,4 +1,4 @@
-package services.factory;
+package fr.diginamic.services.factory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,9 +7,9 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import models.Allergene;
-import models.Descriptif;
-import utils.FilterNotNull;
+import fr.diginamic.models.Allergene;
+import fr.diginamic.models.Descriptif;
+import fr.diginamic.utils.FilterNotNull;
 
 /**
  * Class servant à la fabrication d'un produit.

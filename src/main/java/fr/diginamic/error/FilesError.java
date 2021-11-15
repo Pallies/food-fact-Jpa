@@ -1,4 +1,4 @@
-package error;
+package fr.diginamic.error;
 
 import java.nio.file.Path;
 

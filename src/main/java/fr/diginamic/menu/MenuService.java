@@ -1,5 +1,5 @@
 
-package menu;
+package fr.diginamic.menu;
 
 import java.util.InputMismatchException;
 import java.util.Map;
