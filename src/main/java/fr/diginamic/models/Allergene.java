@@ -3,10 +3,24 @@ package fr.diginamic.models;
 
 import fr.diginamic.utils.FormatTo;
 
+import javax.persistence.*;
+
 /**
  * The Class Allergene.
  */
-public class Allergene extends Descriptif{
+@Entity
+@Table(name = "ALLERGENE")
+public class Allergene implements Descriptif{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column
+	private String nom;
+
+	public Allergene() {
+	}
 
 	/**
 	 * Instantiates a new allergene.
@@ -14,7 +28,7 @@ public class Allergene extends Descriptif{
 	 * @param nom the nom
 	 */
 	public Allergene(String nom) {
-		super(FormatTo.nom(nom));
+		this.nom = FormatTo.nom(nom);
 	}
 
 	/**
@@ -49,5 +63,21 @@ public class Allergene extends Descriptif{
 			return false;
 		Allergene objAllergene = (Allergene) obj;
 		return objAllergene.getNom().equals(this.getNom());
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 }

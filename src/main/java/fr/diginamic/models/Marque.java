@@ -1,11 +1,26 @@
 package fr.diginamic.models;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+
 /**
  * The Class Marque.
  *
  * Indique la Marque du produit
  */
-public class Marque extends Descriptif {
+@Embeddable
+public class Marque implements Descriptif {
+
+	@Column
+	private String nom;
+
+	/**
+	 * Instantiates a new marque.
+	 */
+	public Marque() {
+
+	}
 
 	/**
 	 * Instantiates a new marque.
@@ -13,9 +28,8 @@ public class Marque extends Descriptif {
 	 * @param nom the nom
 	 */
 	public Marque(String nom) {
-		super(nom);
+		this.nom = nom;
 	}
-
 
 
 	/**
@@ -41,5 +55,15 @@ public class Marque extends Descriptif {
 		Marque objMarque = (Marque) obj;
 		return objMarque.getNom().equals(this.getNom());
 
+	}
+
+	@Override
+	public String getNom() {
+		return nom;
+	}
+
+	@Override
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 }

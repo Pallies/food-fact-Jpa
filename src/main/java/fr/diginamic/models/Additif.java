@@ -3,12 +3,24 @@ package fr.diginamic.models;
 
 import fr.diginamic.utils.FormatTo;
 
-
+import javax.persistence.*;
 
 /**
  * The Class Additif.
  */
-public class Additif extends Descriptif {
+@Entity
+@Table(name = "ADDITIF")
+public class Additif implements Descriptif {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column
+	private String nom;
+
+	public Additif() {
+	}
 
 	/**
 	 * Instantiates a new additif.
@@ -16,7 +28,7 @@ public class Additif extends Descriptif {
 	 * @param nom the nom
 	 */
 	public Additif(String nom) {
-		super(FormatTo.nom(nom));
+		this.nom = FormatTo.nom(nom);
 	}
 
 	/**
@@ -54,4 +66,19 @@ public class Additif extends Descriptif {
 
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 }

@@ -1,11 +1,25 @@
 package fr.diginamic.models;
 
+import javax.persistence.*;
+
 /**
  * The Class Ingredient.
  *
  * Les Ingrédients du produit
  */
-public class Ingredient extends Descriptif {
+@Entity
+@Table(name = "INGREDIENT")
+public class Ingredient implements Descriptif {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column
+	private String nom;
+
+	public Ingredient() {
+	}
 
 	/**
 	 *  #Constructor.
@@ -13,7 +27,7 @@ public class Ingredient extends Descriptif {
 	 * @param nom the nom
 	 */
 	public Ingredient(String nom) {
-		super(formatNom(nom));
+		this.nom  =formatNom(nom);
 	}
 
 	/**
@@ -38,4 +52,19 @@ public class Ingredient extends Descriptif {
 		return builderString.append("Ingrédient ").append(getNom()).toString();
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 }
