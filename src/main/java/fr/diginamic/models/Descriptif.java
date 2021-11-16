@@ -1,5 +1,9 @@
 package fr.diginamic.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
 /**
  * The Class Descriptif.
  *

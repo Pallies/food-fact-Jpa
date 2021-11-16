@@ -25,7 +25,7 @@ public class Ingredient extends Descriptif {
 	private static String formatNom(String nom) {
 		return nom.trim().replace("_", "");
 	}
-	
+
 	/**
 	 * Formattage d'affichage
 	 * Ex: Ingredient  sucre.

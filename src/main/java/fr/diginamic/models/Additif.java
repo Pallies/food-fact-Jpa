@@ -3,6 +3,8 @@ package fr.diginamic.models;
 
 import fr.diginamic.utils.FormatTo;
 
+
+
 /**
  * The Class Additif.
  */

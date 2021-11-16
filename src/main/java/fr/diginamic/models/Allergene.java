@@ -26,7 +26,7 @@ public class Allergene extends Descriptif{
 	public String toString() {
 		return "Allergene " + getNom();
 	}
-	
+
 	/**
 	 * Hash code.
 	 *

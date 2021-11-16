@@ -26,7 +26,7 @@ public class Categorie extends Descriptif{
 	public String toString() {
 		return "Catégorie " + getNom() ;
 	}
-	
+
 	/**
 	 * Hash code.
 	 *
@@ -36,7 +36,7 @@ public class Categorie extends Descriptif{
 	public int hashCode() {
 		return super.hashCode();
 	}
-	
+
 	/**
 	 * Equals.
 	 *
@@ -51,5 +51,5 @@ public class Categorie extends Descriptif{
 		return objCategorie.getNom().equals(this.getNom());
 	}
 
-	
+
 }

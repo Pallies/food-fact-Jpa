@@ -11,7 +11,7 @@ import java.util.Map.Entry;
  * pour un attribut Naturel donné
  */
 public class Element{
-	
+
 	/** The elements. */
 	private HashMap<String, Double> elements = new HashMap<String, Double>();
 
@@ -36,9 +36,9 @@ public class Element{
 		StringBuilder elementString = new StringBuilder();
 		for(Entry<String, Double> el:elements.entrySet()) {
 			elementString.append("Elements ")
-			.append(el.getKey()).append(" : ").append(el.getValue()).append("\n");
+					.append(el.getKey()).append(" : ").append(el.getValue()).append("\n");
 		}
-		
+
 		return elementString.toString();
 	}
 
