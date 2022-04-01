@@ -1,8 +1,6 @@
 package fr.diginamic.run;
 
-import java.util.Scanner;
-
-import fr.diginamic.menu.MainMenu;
+import javax.persistence.EntityManager;
 
 /**
  * The Class ApplicationOpenFoodFacts.
@@ -16,11 +14,13 @@ public class ApplicationOpenFoodFacts {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		
-		MainMenu menu = new MainMenu();
-		Scanner scanner = new Scanner(System.in);
-		
-		menu.traiter(scanner);
+		EntityManager em = Connection.builder();
+
+		System.out.println("TEST "+em);
+//		MainMenu menu = new MainMenu();
+//		Scanner scanner = new Scanner(System.in);
+
+//		menu.traiter(scanner);
 	}
 
 }

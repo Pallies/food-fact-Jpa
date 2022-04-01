@@ -1,43 +1,75 @@
 package fr.diginamic.models;
 
+import com.google.protobuf.DescriptorProtos;
+import fr.diginamic.models.enums.NutriScore;
 import fr.diginamic.utils.FormatTo;
 
 
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
 
-
-
 /**
  * The Class Produit.
  */
+@Entity
+@Table(name = "PRODUIT")
 public class Produit {
 
-    /** Categorie du poduit. */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    /**
+     * Categorie du poduit.
+     */
+    @Embedded
     private Categorie categorie;
 
-    /** Marque du produit. */
+    /**
+     * Marque du produit.
+     */
+    @Embedded
     private Marque marque;
 
-    /** nom du produit. */
+    /**
+     * nom du produit.
+     */
+    @Column
     private String nom;
 
-    /** nutri Score note de A<->F. */
-    private String nutritionGradeFr;
+    /**
+     * nutri Score note de A<->F.
+     */
+    @Enumerated
+    @Column(name = "NUTRISCORE")
+    private NutriScore nutritionGradeFr;
 
-    /** ingrédients dans le produit. */
+    /**
+     * ingrédients dans le produit.
+     */
     private List<Descriptif> ingredients;
 
-    /** quantité pour chaque �lement pour 100g. */
+    /**
+     * quantité pour chaque élement pour 100g.
+     */
+    @OneToMany(mappedBy = "attributs")
     private List<Element> elements;
 
-    /** list d'allergenes. */
+    /**
+     * list d'allergenes.
+     */
     private List<Descriptif> allergenes;
 
-    /** list d'additifs. */
+    /**
+     * list d'additifs.
+     */
     private List<Descriptif> additifs;
+
+    public Produit() {
+    }
 
     /**
      * #Constructor.
@@ -56,7 +88,7 @@ public class Produit {
         this.categorie = categorie;
         this.marque = marque;
         this.nom = FormatTo.nom(nom);
-        this.nutritionGradeFr = nutritionGradeFr.toUpperCase();
+        this.nutritionGradeFr = NutriScore.valueOf(nutritionGradeFr.toUpperCase());
         this.ingredients = ingredients;
         this.elements = elements;
         this.allergenes = allergenes;
@@ -67,10 +99,11 @@ public class Produit {
      * Joining collection.
      * permet l'affichage des listes qui compose un produit
      * sur plusieurs lignes
+     *
      * @param list the list
      * @return the string
      */
-    public  String joiningCollection(List<Descriptif> list) {
+    public String joiningCollection(List<Descriptif> list) {
         return list.stream().map(Descriptif::getNom).collect(Collectors.joining("\n "));
     }
 
@@ -91,6 +124,7 @@ public class Produit {
     public int getAdditifsSize() {
         return additifs.size();
     }
+
     /**
      * Gets the igredients size.
      *
@@ -99,6 +133,7 @@ public class Produit {
     public int getIgredientsSize() {
         return ingredients.size();
     }
+
     /**
      * Getter.
      *
@@ -131,7 +166,7 @@ public class Produit {
      *
      * @return the nutritionGradeFr
      */
-    public String getNutritionGradeFr() {
+    public NutriScore getNutritionGradeFr() {
         return nutritionGradeFr;
     }
 

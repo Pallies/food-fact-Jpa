@@ -33,7 +33,7 @@ public class AdditifFactory implements Services<Stream<String>, List<Descriptif>
 		
 //		un additif est toujours composé du préfix E
 		if (!lineAdditif.startsWith("E"))
-			return new ArrayList<Descriptif>();
+			return  new ArrayList<>();
 		
 		List<String> linesAdditifs = Arrays.asList(lineAdditif.replace(",", " ").split("E"));
 		
